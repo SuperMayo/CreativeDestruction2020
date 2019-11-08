@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="apple-touch-icon" href="icon.png" />
+    <!-- Place favicon.ico in the root directory -->
+    <script src="https://www.eventbrite.fr/static/widgets/eb_widgets.js"></script>
+
+    <link rel="stylesheet" href="css/bulma.min.css" />
+    <link rel="stylesheet" href="css/custom.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+      integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+      crossorigin=""
+    />
+
+    <meta name="theme-color" content="#fafafa" />
+  </head>
+
+  <body>
+    <!--[if IE]>
+      <p class="browserupgrade">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="https://browsehappy.com/">upgrade your browser</a> to improve
+        your experience and security.
+      </p>
+    <![endif]-->
+
+    <!-- SECTION: HERO --------------------------------------------------->
+    <section class="hero is-dark is-fullheight has-bg-image">
+      <!-- Hero content: will be in the middle -->
+      <div class="hero-body">
+        <div class="container">
+          <h2 class="title is-3 is-size-4-mobile">The Economics of</h2>
+          <h1 class="title main-title is-1 is-size-2-mobile">
+            Creative Destruction
+          </h1>
+          <h2 class="subtitle">
+            A festschrift symposium in honor of Phillippe Aghion and Peter
+            Howitt
+          </h2>
+          <h2 class="subtitle is-3 is-size-4-mobile">
+            Paris, June 11 & 12, 2020
+          </h2>
+          <div class="columns is-centered">
+            <div class="column is-tight">
+              <a
+                href="#program"
+                class="button has-shadow is-primary is-rounded"
+              >
+                Get the program!
+              </a>
+            </div>
+          </div>
+          <div class="columns is-centered">
+            <div class="column is-tight">
+              <a
+                href="#register"
+                class="button has-shadow is-danger is-rounded has-text-weight-bold"
+              >
+                Register
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: Program ---------------------------------------->
+    <section class="background-dark has-shadow">
+      <div class="container">
+        <h2
+          id="program"
+          class="title light section-title is-2 has-text-centered"
+        >
+          Check the Program!
+        </h2>
+        <div class="columns is-centered">
+          <div class="column is-one-third is-centered">
+            <div class="card">
+              <div class="card-image has-text-centered">
+                <a href="pdf/program.pdf" class="is-inline-block">
+                  <figure class="image is-centered is-inline-block">
+                    <img
+                      src="img/program.png"
+                      alt="Click here to download the program"
+                    />
+                  </figure>
+                </a>
+              </div>
+              <div class="card-content has-text-centered">
+                <a href="pdf/program.pdf" class="button is-link is-outlined">
+                  Download as pdf
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: Register --------------------------------------->
+    <section class="has-shadow">
+      <div class="container">
+        <h2 id="register" class="title section-title is-2 has-text-centered">
+          Register soon!
+        </h2>
+        <div id="eventbrite"></div>
+      </div>
+    </section>
+
+    <!-- SECTION: WHERE  ---------------------------------------->
+    <section class="background-dark is-light has-shadow">
+      <div class="container">
+        <div class="columns is-centered is-vcentered">
+          <div class="column is-one-third">
+            <h2 class="title light is-2">Where?</h2>
+            <p>
+              Collège de France <br />
+              11 place Marcelin Berthelot <br />
+              75005 Paris
+            </p>
+          </div>
+          <div class="column">
+            <div id="mapid"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: POSTER --------------------------------->
+    <section class="has-shadow">
+      <div class="container">
+        <div class="columns is-centered is-vcentered">
+          <div class="column is-half is-centered mobile-under">
+            <div class="card">
+              <div class="card-image has-text-centered">
+                <a href="pdf/poster.pdf" class="is-inline-block">
+                  <figure class="image is-centered is-inline-block">
+                    <img
+                      src="img/poster.jpg"
+                      alt="Click here to download the poster"
+                    />
+                  </figure>
+                </a>
+              </div>
+              <div class="card-content has-text-centered">
+                <a href="pdf/poster.pdf" class="button is-link is-outlined">
+                  Download as pdf
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="column is-half mobile-upper">
+            <h2 class="title is-2">Check the promotional poster!</h2>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer is-dark has-shadow">
+      <div class="column is-centered has-text-centered">
+        <h2 class="title is-3 light"></h2>
+      </div>
+      <div class="columns is-vcentered">
+        <div class="column is-3 is-offset-2 is-centered">
+          <img src="img/college.png" alt="" />
+        </div>
+        <div class="column is-3 is-offset-2 is-centered">
+          <img src="img/bdflight.png" alt="" />
+        </div>
+      </div>
+    </footer>
+
+    <script type="text/javascript">
+      var exampleCallback = function() {
+        console.log("Order complete!")
+      }
+
+      window.EBWidgets.createWidget({
+        // Required
+        widgetType: "checkout",
+        eventId: "80435598039",
+        iframeContainerId: "eventbrite",
+
+        // Optional
+        iframeContainerHeight: 425, // Widget height in pixels. Defaults to a minimum of 425px if not provided
+        onOrderComplete: exampleCallback, // Method called when an order has successfully completed
+      })
+    </script>
+    <script src="js/vendor/modernizr-3.7.1.min.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      window.jQuery ||
+        document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')
+    </script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+    <script
+      src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+      integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+      crossorigin=""
+    ></script>
+    <script src="js/map.js"></script>
+    <script src="js/mobile.js"></script>
+    <script src="js/smoothscroll.js"></script>
+  </body>
+</html>
