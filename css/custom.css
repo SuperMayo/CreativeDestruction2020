@@ -27,7 +27,7 @@ footer.footer {
 }
 
 .has-bg-image {
-  background: url("/img/turnerwebdarker.jpg") center center;
+  background: url("../img/turnerwebdarker.jpg") center center;
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
