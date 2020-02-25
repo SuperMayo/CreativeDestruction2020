@@ -9,7 +9,6 @@
     <link rel="manifest" href="site.webmanifest" />
     <link rel="apple-touch-icon" href="icon.png" />
     <!-- Place favicon.ico in the root directory -->
-    <script src="https://www.eventbrite.fr/static/widgets/eb_widgets.js"></script>
 
     <link rel="stylesheet" href="css/bulma.min.css" />
     <link rel="stylesheet" href="css/custom.css" />
@@ -61,10 +60,10 @@
           <div class="columns is-centered">
             <div class="column is-tight">
               <a
-                href="#register"
+                href="#informations"
                 class="button has-shadow is-danger is-rounded has-text-weight-bold"
               >
-                Register
+                Practical informations
               </a>
             </div>
           </div>
@@ -108,10 +107,23 @@
     <!-- SECTION: Register --------------------------------------->
     <section class="has-shadow">
       <div class="container">
-        <h2 id="register" class="title section-title is-2 has-text-centered">
-          Register soon!
+        <h2
+          id="informations"
+          class="title section-title is-2 has-text-centered"
+        >
+          Practical informations
         </h2>
-        <div id="eventbrite"></div>
+        <h4 class="title is-4">
+          Open entry until filled to capacity.
+        </h4>
+        <h4 class="title is-4 ">
+          How to get there:
+        </h4>
+        <p>
+          <strong>Metro:</strong> Maubert - Mutualité (line 10) <br />
+          <strong>RER:</strong> Luxembourg (line B) <br />
+          <strong>Bus:</strong> Collège de France (lines 63 & 86)
+        </p>
       </div>
     </section>
 
@@ -178,22 +190,6 @@
       </div>
     </footer>
 
-    <script type="text/javascript">
-      var exampleCallback = function() {
-        console.log("Order complete!")
-      }
-
-      window.EBWidgets.createWidget({
-        // Required
-        widgetType: "checkout",
-        eventId: "80435598039",
-        iframeContainerId: "eventbrite",
-
-        // Optional
-        iframeContainerHeight: 425, // Widget height in pixels. Defaults to a minimum of 425px if not provided
-        onOrderComplete: exampleCallback, // Method called when an order has successfully completed
-      })
-    </script>
     <script src="js/vendor/modernizr-3.7.1.min.js"></script>
     <script
       src="https://code.jquery.com/jquery-3.4.1.min.js"
@@ -202,7 +198,9 @@
     ></script>
     <script>
       window.jQuery ||
-        document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')
+        document.write(
+          '<script src="js/vendor/jquery-3.4.1.min.js"><\/script>'
+        );
     </script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
